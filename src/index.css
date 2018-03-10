@@ -1,0 +1,196 @@
+* {
+  outline: none !important;
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+  font-family: 'Abel', sans-serif;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+
+.calcButton {
+  font-family: inherit;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  padding: 20px;
+  font-size: 60px;
+  border-radius: 60px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px white;
+}
+
+button:active {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 black;
+}
+
+.ant0, .ant1, .ant2, .ant3, .ant4 {
+  background-size: 100px;
+  background-repeat: no-repeat;
+  min-height: 90px;
+  margin-left: 28px;
+}
+
+.title {
+  color: white;
+  font-family: 'Rammetto One', cursive;
+  font-size: 85px;
+  transform: rotate(270deg);
+  transform-origin: left top 0;
+  position: absolute;
+  left: 0;
+  top: 566px;
+  min-width: fit-content;
+}
+
+.ant0 {
+  background-image: url('ants/ant0.png');
+}
+
+.ant1 {
+  background-image: url('ants/ant1.png');
+}
+
+.ant2 {
+  background-image: url('ants/ant2.png');
+}
+
+.ant3 {
+  background-image: url('ants/ant3.png');
+}
+
+.ant4 {
+  background-image: url('ants/ant4.png');
+}
+
+.calculating, .antOdds {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.calculating:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+
+.main {
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 60px;
+  max-height: 800px;
+}
+
+.message {
+  position: absolute;
+  right: 67px;
+  top: 745px;
+  z-index: 20;
+}
+
+.odds {
+  position: absolute;
+  font-size: 130px;
+  right: 30px;
+}
+
+.oddsLabel {
+  position: absolute;
+  right: -532px;
+  color: rgba(255, 255, 255, .1);
+  font-family: 'Rammetto One', cursive;
+  font-size: 215px;
+  transform: rotate(270deg);
+  transform-origin: left top 0;
+  line-height: 205px
+}
+
+.racer {
+  position: relative;
+  padding: 0;
+  text-align: center;
+  width: 155px;
+  padding-left: 5px;
+  padding-top: 10px;
+  list-style: none;
+}
+
+.racer.id0 {
+  background-color: rgba(255, 255, 0, .5);
+}
+
+.racer.id1 {
+  background-color: rgba(112, 0, 255, 0.5);
+}
+
+.racer.id2 {
+  background-color: rgba(1, 95, 255, 0.62);
+}
+
+.racer.id3 {
+  background-color: rgba(14, 115, 5, 0.56);
+}
+
+.racer.id4 {
+  background-color: rgba(255, 0, 0, 0.63);
+}
+
+.racers {
+  margin-left: 100px;
+}
+
+.reset {
+  font-family: inherit;
+  bottom: 12px;
+  left: 53px;
+  padding: 0;
+  font-size: 23px;
+  padding: 5px;
+  position: absolute;
+  border-radius: 60px;
+}
+
+@-webkit-keyframes reducetime {
+0% {width: 0;}
+100% { width: 100%; }
+}
+
+.move {
+  height: 200px;
+  background-color: red;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: reducetime;
+  /* float: left; */
+}
