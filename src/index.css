@@ -173,12 +173,11 @@ button:active {
 
 .reset {
   font-family: inherit;
-  bottom: 12px;
-  left: 53px;
+  margin-left: 57px;
+  margin-top: -7px;
   padding: 0;
   font-size: 23px;
   padding: 5px;
-  position: absolute;
   border-radius: 60px;
 }
 

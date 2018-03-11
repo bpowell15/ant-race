@@ -77,6 +77,8 @@ export default class AntRace extends React.Component {
 
 
 
+
+
   ants(){
     let ants;
 
@@ -136,16 +138,17 @@ export default class AntRace extends React.Component {
     }
 
     return(
+      <div>
         <div className="main">
           <h1 className="title">Ant Race</h1>
           <div className="racers">
             {ants}
           </div>
-          {button}
           <div className="oddsLabel">ODDS</div>
           <div className="message">Calculated? {this.state.message}</div>
         </div>
-
+        {button}
+      </div>
     );
   }
 }
