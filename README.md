@@ -11,6 +11,10 @@
 
 
 ### To Run
+Visit [Ant Race Odds](http://antrace.bricepowell.com)
+
+OR
+
 1. Clone this repo
 2. cd into the /ant-race folder in the terminal
 3. run 'npm install'

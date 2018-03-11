@@ -16,7 +16,7 @@
     "eject": "react-scripts eject",
     "deploy" : "npm run build&&gh-pages -d build"
   },
-  "homepage": "https://bpowell15.github.io/ant-race/",
+  "homepage": "https://antrace.bricepowell.com",
   "devDependencies": {
     "gh-pages": "^1.1.0"
   }
