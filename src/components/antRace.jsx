@@ -10,7 +10,7 @@ export default class AntRace extends React.Component {
       calculating: false,
       calculated: false,
       calculationRenders: 0,
-      message: 'Nope'
+      message: 'Nope.'
     };
     this.calculateOdds = this.calculateOdds.bind(this);
     this.reset = this.reset.bind(this);
@@ -35,7 +35,7 @@ export default class AntRace extends React.Component {
   calculateOdds(){
     this.setState({
       calculating: true,
-      message: 'Working on it'
+      message: 'Working on it.'
     });
     let calculatedCount = 0;
     Object.keys(this.state.ants).forEach((ant, i) => {
@@ -71,7 +71,8 @@ export default class AntRace extends React.Component {
     this.setState({
       calculating: false,
       calculated: false,
-      ants: ants
+      ants: ants,
+      message: 'Nope.'
     });
   }
 
@@ -148,6 +149,13 @@ export default class AntRace extends React.Component {
           <div className="message">Calculated? {this.state.message}</div>
         </div>
         {button}
+        <div className="links">
+          Brice Powell &nbsp;
+          <a href="http://bricepowell.com">Portfolio</a>&nbsp;
+          <a href="https://github.com/bpowell15">Github</a>&nbsp;
+          <a href="https://linkedin.com/in/bpowell15">LinkedIn</a>&nbsp;
+          <a href="https://angel.co/brice-powell?public_profile=1">Angel List</a>
+        </div>
       </div>
     );
   }

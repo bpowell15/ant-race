@@ -2,6 +2,16 @@
   outline: none !important;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 body, ul {
   margin: 0;
   padding: 0;
@@ -105,6 +115,10 @@ button:active {
   }
 }
 
+.links {
+  margin-top: -8px;
+  text-align: center;
+}
 
 .main {
   margin: 10px;
@@ -173,23 +187,11 @@ button:active {
 
 .reset {
   font-family: inherit;
-  margin-left: 57px;
-  margin-top: -7px;
+  position: absolute;
+  left: 57px;
+  top: 746px;
   padding: 0;
   font-size: 23px;
   padding: 5px;
   border-radius: 60px;
-}
-
-@-webkit-keyframes reducetime {
-0% {width: 0;}
-100% { width: 100%; }
-}
-
-.move {
-  height: 200px;
-  background-color: red;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-name: reducetime;
-  /* float: left; */
 }
