@@ -77,9 +77,6 @@ export default class AntRace extends React.Component {
   }
 
 
-
-
-
   ants(){
     let ants;
 
