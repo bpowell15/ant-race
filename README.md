@@ -1,5 +1,5 @@
 # Ant Race Coding Challenge
- A very special app for purveyors of the competitive ant racing scene, who wish to view statistics related to competing ants before races take place.<br/>
+ A very special app for purveyors of the competitive ant racing scene, who wish to view statistics related to competing ants before races take place.<br/></br>
 <img src="antrace.gif" width="75%" height="75%">
 
 ### GraphQL
