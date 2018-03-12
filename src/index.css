@@ -30,6 +30,7 @@ body, ul {
   padding: 20px;
   font-size: 60px;
   border-radius: 60px;
+  webkit-box-shadow: 5px 5px #fff;
 }
 
 button:hover {
@@ -85,7 +86,7 @@ button:active {
   background-image: url('ants/ant4.png');
 }
 
-.calculating, .antOdds {
+.calculating {
   position: absolute;
   z-index: 20;
   bottom: 0;
@@ -93,6 +94,12 @@ button:active {
   text-align: center;
 }
 
+.antOdds {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  right: 27px;
+}
 .calculating:after {
   overflow: hidden;
   display: inline-block;

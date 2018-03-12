@@ -84,7 +84,7 @@ export default class AntRace extends React.Component {
       ants = Object.keys(this.state.ants).map((i)=>{
         let odds = this.state.ants[i].likelihoodOfAntWinning;
         let status = <div className="calculating">Calculating</div>;
-        let move;
+        let move = {};
         if (odds !== 0) {
           status =<div className="antOdds">Chance: {parseFloat(odds).toFixed(5)}</div>;
           move = this.move(odds);
@@ -114,11 +114,11 @@ export default class AntRace extends React.Component {
   }
 
   move(odds){
-    let distance = `translateX(${odds * (65 - 0) + 0}vw)`;
+    let distance = `${odds * (65 - 0) + 0}vw`;
     const move = {
       transitionTimingFunction: "ease-in-out",
       transition: "3s",
-      transform: distance
+      paddingLeft: distance
     };
     return move;
   }
