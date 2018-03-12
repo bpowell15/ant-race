@@ -1,6 +1,6 @@
 # Ant Race Coding Challenge
  A very special app for purveyors of the competitive ant racing scene, who wish to view statistics related to competing ants before races take place.<br/></br>
-<img src="antrace.gif" width="75%" height="75%">
+<img src="antrace1.gif" width="75%" height="75%">
 
 ### GraphQL
 - Obtains racer information from a GraphQL API
