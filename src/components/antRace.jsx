@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import { merge } from 'lodash';
+import CountUp from 'react-countup';
 
 export default class AntRace extends React.Component {
   constructor(){
@@ -90,7 +91,8 @@ export default class AntRace extends React.Component {
           move = this.move(odds);
         }
         return (<div key={i}>
-          <div className='odds'>{`${Math.round(odds * 100)}%`}</div>
+          <CountUp className="odds" start={0} end={Math.round(odds * 100)} suffix="%" />
+          {/* <div className='odds'>{`${Math.round(odds * 100)}%`}</div> */}
           <ul style={move} className={`racer id${i}`}>
             <li>{this.state.ants[i].name}</li>
             <li>Length: {this.state.ants[i].length}</li>

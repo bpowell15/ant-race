@@ -5,6 +5,7 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "react": "^16.2.0",
+    "react-countup": "^3.0.3",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1"
   },
@@ -14,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy" : "npm run build&&gh-pages -d build"
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "homepage": "https://antrace.bricepowell.com",
   "devDependencies": {
