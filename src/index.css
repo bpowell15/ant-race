@@ -131,7 +131,7 @@ button:active {
   margin: 10px;
   border: 1px solid white;
   border-radius: 60px;
-  max-height: 800px;
+  min-height: 732px;
 }
 
 .message {
@@ -169,23 +169,23 @@ button:active {
 }
 
 .racer.id0 {
-  background-color: rgba(255, 255, 0, .5);
+  background-color: rgba(255, 255, 0, .7);
 }
 
 .racer.id1 {
-  background-color: rgba(112, 0, 255, 0.5);
+  background-color: rgba(112, 0, 255,  .7);
 }
 
 .racer.id2 {
-  background-color: rgba(1, 95, 255, 0.62);
+  background-color: rgba(1, 95, 255,  .7);
 }
 
 .racer.id3 {
-  background-color: rgba(14, 115, 5, 0.56);
+  background-color: rgba(14, 115, 5,  .7);
 }
 
 .racer.id4 {
-  background-color: rgba(255, 0, 0, 0.63);
+  background-color: rgba(255, 0, 0,  .7);
 }
 
 .racers {

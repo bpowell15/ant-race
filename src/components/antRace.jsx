@@ -81,18 +81,30 @@ export default class AntRace extends React.Component {
   ants(){
     let ants;
 
+
     if (this.state.calculating){
+      let high = 0;
+      let ant;
+      let winner = Object.keys(this.state.ants).forEach((i)=>{
+        if (this.state.ants[i].likelihoodOfAntWinning > high) {
+          high = this.state.ants[i].likelihoodOfAntWinning;
+          ant = i;
+        }
+        console.log(ant, i);
+      });
+
       ants = Object.keys(this.state.ants).map((i)=>{
         let odds = this.state.ants[i].likelihoodOfAntWinning;
         let status = <div className="calculating">Calculating</div>;
         let move = {};
+
         if (odds !== 0) {
           status =<div className="antOdds">Chance: {parseFloat(odds).toFixed(5)}</div>;
-          move = this.move(odds);
+          move = this.move(odds, ant, i);
         }
+
         return (<div key={i}>
           <CountUp className="odds" start={0} end={Math.round(odds * 100)} suffix="%" />
-          {/* <div className='odds'>{`${Math.round(odds * 100)}%`}</div> */}
           <ul style={move} className={`racer id${i}`}>
             <li>{this.state.ants[i].name}</li>
             <li>Length: {this.state.ants[i].length}</li>
@@ -115,12 +127,17 @@ export default class AntRace extends React.Component {
     return ants;
   }
 
-  move(odds){
+  move(odds, ant, i){
+    let opacity = {opacity: .5};
     let distance = `${odds * (65 - 0) + 0}vw`;
+    if (i === ant) {
+       opacity = {opacity: 1};
+    }
     const move = {
       transitionTimingFunction: "ease-in-out",
       transition: "3s",
-      paddingLeft: distance
+      paddingLeft: distance,
+      opacity: opacity.opacity
     };
     return move;
   }
@@ -149,10 +166,10 @@ export default class AntRace extends React.Component {
         </div>
         {button}
         <div className="links">
-          Brice Powell &nbsp;
-          <a href="http://bricepowell.com">Portfolio</a>&nbsp;
-          <a href="https://github.com/bpowell15">Github</a>&nbsp;
-          <a href="https://linkedin.com/in/bpowell15">LinkedIn</a>&nbsp;
+          Brice Powell &nbsp;|&nbsp;
+          <a href="http://bricepowell.com">Portfolio</a>&nbsp;|&nbsp;
+          <a href="https://github.com/bpowell15">Github</a>&nbsp;|&nbsp;
+          <a href="https://linkedin.com/in/bpowell15">LinkedIn</a>&nbsp;|&nbsp;
           <a href="https://angel.co/brice-powell?public_profile=1">Angel List</a>
         </div>
       </div>
