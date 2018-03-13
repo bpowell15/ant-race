@@ -77,30 +77,32 @@ export default class AntRace extends React.Component {
     });
   }
 
+  mostLikelyWinner(){
+    let high = 0;
+    let ant;
+    let winner = Object.keys(this.state.ants).forEach((i)=>{
+      if (this.state.ants[i].likelihoodOfAntWinning > high) {
+        high = this.state.ants[i].likelihoodOfAntWinning;
+        ant = i;
+      }
+    });
+    return ant;
+  }
+
 
   ants(){
     let ants;
-
-
+    let mostLikelyWinner = this.mostLikelyWinner();
     if (this.state.calculating){
-      let high = 0;
-      let ant;
-      let winner = Object.keys(this.state.ants).forEach((i)=>{
-        if (this.state.ants[i].likelihoodOfAntWinning > high) {
-          high = this.state.ants[i].likelihoodOfAntWinning;
-          ant = i;
-        }
-        console.log(ant, i);
-      });
-
       ants = Object.keys(this.state.ants).map((i)=>{
+
         let odds = this.state.ants[i].likelihoodOfAntWinning;
         let status = <div className="calculating">Calculating</div>;
         let move = {};
 
         if (odds !== 0) {
           status =<div className="antOdds">Chance: {parseFloat(odds).toFixed(5)}</div>;
-          move = this.move(odds, ant, i);
+          move = this.move(odds, mostLikelyWinner, i);
         }
 
         return (<div key={i}>
