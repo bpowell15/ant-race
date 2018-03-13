@@ -130,7 +130,7 @@ export default class AntRace extends React.Component {
   }
 
   move(odds, ant, i){
-    let opacity = {opacity: .5};
+    let opacity = {opacity: .3};
     let distance = `${odds * (65 - 0) + 0}vw`;
     if (i === ant) {
        opacity = {opacity: 1};
