@@ -80,7 +80,7 @@ export default class AntRace extends React.Component {
   mostLikelyWinner(){
     let high = 0;
     let ant;
-    let winner = Object.keys(this.state.ants).forEach((i)=>{
+    Object.keys(this.state.ants).forEach((i)=>{
       if (this.state.ants[i].likelihoodOfAntWinning > high) {
         high = this.state.ants[i].likelihoodOfAntWinning;
         ant = i;
